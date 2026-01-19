@@ -1,82 +1,86 @@
-# Lightweight React Template for KAVIA
+# todo_frontend
 
-This project provides a minimal React template with a clean, modern UI and minimal dependencies.
+A simple React web app intended to manage a lightweight todo list (add, edit, delete). It is built with Create React App and runs locally on port **3000**.
+
+## Overview
+
+This repository contains the **frontend** for the todo app. The UI currently includes a basic CRA starter page with a light/dark theme toggle; todo CRUD can be added on top of this foundation.
 
 ## Features
 
-- **Lightweight**: No heavy UI frameworks - uses only vanilla CSS and React
-- **Modern UI**: Clean, responsive design with KAVIA brand styling
-- **Fast**: Minimal dependencies for quick loading times
-- **Simple**: Easy to understand and modify
+- Simple, browser-based UI
+- Create React App tooling (fast dev server, production build)
+- Light/dark theme toggle
 
-## Getting Started
+## Tech stack
 
-In the project directory, you can run:
+- React (with React DOM)
+- Create React App / `react-scripts`
+- JavaScript + CSS
 
-### `npm start`
+## Getting started
 
-Runs the app in development mode.\
-Open [http://localhost:3000](http://localhost:3000) to view it in your browser.
+### Prerequisites
 
-### `npm test`
+- Node.js (LTS recommended)
+- npm
 
-Launches the test runner in interactive watch mode.
+### Install
 
-### `npm run build`
+From this folder:
 
-Builds the app for production to the `build` folder.\
-It correctly bundles React in production mode and optimizes the build for the best performance.
-
-## Customization
-
-### Colors
-
-The main brand colors are defined as CSS variables in `src/App.css`:
-
-```css
-:root {
-  --kavia-orange: #E87A41;
-  --kavia-dark: #1A1A1A;
-  --text-color: #ffffff;
-  --text-secondary: rgba(255, 255, 255, 0.7);
-  --border-color: rgba(255, 255, 255, 0.1);
-}
+```bash
+cd simple-todo-list-201379-201389/todo_frontend
+npm install
 ```
 
-### Components
+### Run (dev)
 
-This template uses pure HTML/CSS components instead of a UI framework. You can find component styles in `src/App.css`. 
+```bash
+npm start
+```
 
-Common components include:
-- Buttons (`.btn`, `.btn-large`)
-- Container (`.container`)
-- Navigation (`.navbar`)
-- Typography (`.title`, `.subtitle`, `.description`)
+Then open:
 
-## Learn More
+- http://localhost:3000
 
-To learn React, check out the [React documentation](https://reactjs.org/).
+## Available scripts
 
-### Code Splitting
+In `simple-todo-list-201379-201389/todo_frontend`, you can run:
 
-This section has moved here: [https://facebook.github.io/create-react-app/docs/code-splitting](https://facebook.github.io/create-react-app/docs/code-splitting)
+- `npm start`  
+  Starts the development server (default: http://localhost:3000).
 
-### Analyzing the Bundle Size
+- `npm run build`  
+  Builds a production bundle into the `build/` directory.
 
-This section has moved here: [https://facebook.github.io/create-react-app/docs/analyzing-the-bundle-size](https://facebook.github.io/create-react-app/docs/analyzing-the-bundle-size)
+- `npm test`  
+  Runs the test runner (`react-scripts test`). By default this starts in watch mode.
 
-### Making a Progressive Web App
+- `npm run eject`  
+  Ejects from Create React App (one-way operation).
 
-This section has moved here: [https://facebook.github.io/create-react-app/docs/making-a-progressive-web-app](https://facebook.github.io/create-react-app/docs/making-a-progressive-web-app)
+## Environment variables
 
-### Advanced Configuration
+This project may be configured via the following `REACT_APP_*` variables (values are typically provided via a `.env` file or the environment). Note that the current frontend code may not consume all of these yet.
 
-This section has moved here: [https://facebook.github.io/create-react-app/docs/advanced-configuration](https://facebook.github.io/create-react-app/docs/advanced-configuration)
+- `REACT_APP_API_BASE`: Base URL for API requests.
+- `REACT_APP_BACKEND_URL`: Backend service URL (if used separately from API base).
+- `REACT_APP_FRONTEND_URL`: Public URL for the frontend (useful for links/callbacks).
+- `REACT_APP_WS_URL`: WebSocket URL (if real-time features are added).
+- `REACT_APP_NODE_ENV`: Environment indicator (development/production).
+- `REACT_APP_NEXT_TELEMETRY_DISABLED`: Telemetry toggle (commonly used in some toolchains).
+- `REACT_APP_ENABLE_SOURCE_MAPS`: Controls source map generation in builds (if wired up).
+- `REACT_APP_PORT`: Port configuration (CRA typically uses `PORT`; this is listed as provided).
+- `REACT_APP_TRUST_PROXY`: Proxy/trust configuration (typically relevant when behind a proxy).
+- `REACT_APP_LOG_LEVEL`: Logging verbosity for the frontend (if implemented).
+- `REACT_APP_HEALTHCHECK_PATH`: Path for a health endpoint (if served/used by the app).
+- `REACT_APP_FEATURE_FLAGS`: Feature flag configuration payload (string/JSON if used).
+- `REACT_APP_EXPERIMENTS_ENABLED`: Enable/disable experimental features.
 
-### Deployment
+## Roadmap
 
-This section has moved here: [https://facebook.github.io/create-react-app/docs/deployment](https://facebook.github.io/create-react-app/docs/deployment)
+- Implement todo list CRUD in the UI (add/edit/delete).
+- Persist todos (e.g., localStorage or an external API) and handle loading/error states.
+- Improve test coverage for todo interactions and edge cases.
 
-### `npm run build` fails to minify
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/troubleshooting#npm-run-build-fails-to-minify](https://facebook.github.io/create-react-app/docs/troubleshooting#npm-run-build-fails-to-minify)
